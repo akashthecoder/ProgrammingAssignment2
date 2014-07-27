@@ -45,9 +45,20 @@ cacheSolve <- function(x, ...) {
     
   }
   
-  #compute inverse and set the function
+  #compute inverse and set the value
   data <- x$get()
   m <- solve(data, ...)
   x$setinverse(m)
   m
 }
+
+## below commands will run the code and testify that it works fine.
+
+## M = matrix(1:4,ncol=2,nrow=2)
+## testm = makeCacheMatrix(M)
+## cacheSolve(testm)
+## testm$get()
+## testm$getinverse()
+## cacheSolve(testm)
+##
+#
